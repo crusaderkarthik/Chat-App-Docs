@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+    
+
+<head>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Setup &amp; Importing Android Studio Project | FireApp</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        
+        <meta name="author" content="">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="twitter:card" value="summary">
+                    <link rel="canonical" href="http://2.0/setup-android" />
+                                                                                            <meta property="og:type" content="article" />
+                                                                                                                        
+        
+        <link rel="stylesheet" href="../vendor/binarytorch/larecipe/assets/css/app.css">
+
+        
+        <link rel="apple-touch-icon" href="//images/favicon.ico">
+<link rel="shortcut icon" type="image/png" href="//images/favicon.ico"/>
+        
+        
+        <style>
+    :root {
+        --primary: #787AF6;
+        --secondary: #2b9cf2;
+    }
+
+    :not(pre)>code[class*=language-], pre[class*=language-] {
+        border-top: 3px solid #787AF6;
+    }
+    
+    .bg-gradient-primary {
+        background: linear-gradient(87deg, #787AF6 0, #2b9cf2 100%) !important;
+    }
+
+    [v-cloak] > * { 
+        display: none; 
+    }
+    
+    [v-cloak]::before { 
+        content: " ";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #F2F6FA;
+    }
+</style>
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="xWufmeFvKgtGACwcii247vd5477GSXCZoqnqb1Rp">
+
+            </head>
+    <body>
+        <div id="app" v-cloak>
+            <div class="fixed pin-t pin-x z-40">
+    <div class="bg-gradient-primary text-white h-1"></div>
+    
+    <nav class="flex items-center justify-between text-black bg-navbar shadow-xs h-16">
+        <div class="flex items-center flex-no-shrink">
+           <a href="" class="flex items-center flex-no-shrink text-black mx-4">
+                <!-- <svg height="30px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Jelly-icons" transform="translate(-647.000000, -437.000000)" fill-rule="nonzero">
+            <g id="coupon" transform="translate(640.000000, 430.000000)">
+                <rect id="range" fill="#000000" opacity="0" x="0" y="0" width="60" height="60"></rect>
+                <path d="M7.67578125,12.7324219 L7.67578125,43.78125 C7.67578125,49.4414062 10.4765625,51.1289062 10.4765625,51.1289062 C12.0234375,52.6699219 14.53125,52.6699219 16.078125,51.1289062 C17.625,49.5878906 20.1328125,49.5878906 21.6796875,51.1289062 C23.2265625,52.6699219 25.734375,52.6699219 27.28125,51.1289062 C28.828125,49.5878906 31.3359375,49.5878906 32.8828125,51.1289062 C34.4296875,52.6699219 36.9375,52.6699219 38.484375,51.1289062 C40.03125,49.5878906 42.5390625,49.5878906 44.0859375,51.1289062 C45.6328125,52.6699219 48.140625,52.6699219 49.6875,51.1289062 C49.6875,51.1289062 52.4882812,49.2128906 52.4882812,43.78125 C52.4882812,38.3496094 52.4765625,12.7324219 52.4765625,12.7324219 C52.4765625,9.83789063 50.1152344,7.49414063 47.2089844,7.49414063 L12.9316406,7.49414063 C10.0371094,7.49414063 7.67578125,9.83789063 7.67578125,12.7324219 Z" id="appearance" fill="#787AF6"></path>
+                <path d="M17.3261719,16.5996094 C16.2011719,16.5996094 15.2871094,17.5136719 15.2871094,18.6386719 L15.2871094,21.2109375 C15.2871094,22.3359375 16.2011719,23.25 17.3261719,23.25 L45.8496094,23.25 C46.9746094,23.25 47.8886719,22.3359375 47.8886719,21.2109375 L47.8886719,18.6386719 C47.8886719,17.5136719 46.9746094,16.5996094 45.8496094,16.5996094 L17.3261719,16.5996094 Z M29.5488281,27.8085938 L17.3261719,27.8085938 C16.2011719,27.8085938 15.2871094,27.9726562 15.2871094,29.0976562 C15.2871094,30.2226562 16.2011719,30.3867188 17.3261719,30.3867188 L29.5488281,30.3867188 C30.6738281,30.3867188 31.5878906,30.2226562 31.5878906,29.0976562 C31.5878906,27.9726562 30.6738281,27.8085938 29.5488281,27.8085938 Z M29.5488281,34.9394531 L17.3261719,34.9394531 C16.2011719,34.9394531 15.2871094,35.1035156 15.2871094,36.2285156 C15.2871094,37.3535156 16.2011719,37.5175781 17.3261719,37.5175781 L29.5488281,37.5175781 C30.6738281,37.5175781 31.5878906,37.3535156 31.5878906,36.2285156 C31.5878906,35.1035156 30.6738281,34.9394531 29.5488281,34.9394531 Z" id="section" fill="#FFFFFF"></path>
+                <path d="M11.34375,16.3886719 C10.7636719,16.3886719 10.2890625,15.9140625 10.2890625,15.3339844 L10.2890625,14.7539062 C10.2890625,12.0644531 12.4804688,9.87304688 15.1699219,9.87304688 L16.1132812,9.87304688 C16.6933594,9.87304688 17.1679688,10.3476562 17.1679688,10.9277344 C17.1679688,11.5078125 16.6933594,11.9824219 16.1132812,11.9824219 L15.1640625,11.9824219 C13.6347656,11.9824219 12.3925781,13.2246094 12.3925781,14.7539062 L12.3925781,15.3339844 C12.3984375,15.9140625 11.9238281,16.3886719 11.34375,16.3886719 Z M11.34375,20.4667969 C10.7636719,20.4667969 10.2890625,19.9921875 10.2890625,19.4121094 L10.2890625,18.796875 C10.2890625,18.2167969 10.7636719,17.7421875 11.34375,17.7421875 C11.9238281,17.7421875 12.3984375,18.2167969 12.3984375,18.796875 L12.3984375,19.4121094 C12.3984375,19.9921875 11.9238281,20.4667969 11.34375,20.4667969 Z" id="highlight" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg> -->
+<img src="/images/favicon.ico" alt="">
+                <p class="inline-block font-semibold ml-1 text-grey-dark">
+                    FireApp
+                </p>
+            </a>
+            
+            <div class="switch">
+                <input type="checkbox" name="1" id="1" v-model="sidebar" class="switch-checkbox" />
+                <label class="switch-label" for="1"></label>
+            </div>
+        </div>
+
+
+    </nav>
+</div>            
+            <internal-search-box 
+            v-if="searchBox"
+            @close="searchBox = false"
+            version="2.0"
+        ></internal-search-box>
+                
+            <div>
+	<div class="sidebar" :class="[{'is-hidden': ! sidebar}]">
+    <ul>
+<li>
+<h2>Get Started</h2>
+<ul>
+<li><a href="setup-android.html">Setup Android Project</a></li>
+<li><a href="setup-firebase.html">Setup Firebase</a></li>
+<li><a href="cloud-functions.html">Setup Backend - Cloud Functions</a></li>
+<li><a href="sha1.html">Adding your SHA1 Key</a></li>
+<li><a href="enable-agora.html">Enable Video &amp; Voice Calls</a></li>
+<li><a href="maps-location.html">Maps &amp; Location</a></li>
+<li><a href="translation.html">Translating</a></li>
+<li><a href="notes-and-troubleshooting.html">Notes &amp; Troubleshooting</a></li>
+
+<li><a href="encryption-notes.html">Notes regarding Encryption</a></li>
+<li><a href="add-testing-numbers.html">Add Testing Numbers</a></li>
+</ul>
+</li>
+</ul>
+</div>	
+	<div class="documentation is-dark" :class="{'expanded': ! sidebar}">
+		<h1>Setup &amp; Importing Android Studio Project</h1>
+<hr />
+<ul>
+<li><a href="#section-1">What Android Studio version is needed?</a></li>
+<li><a href="#section-2">How to open the project in Android Studio?</a></li>
+<li><a href="#section-3">How to change the package name?</a></li>
+<li><a href="#section-4">How to change the app name?</a></li>
+<li><a href="#section-5">How to enable/disable Ad?</a></li>
+<li><a href="#config-encryption">How to Configure Encryption?</a></li>
+<li><a href="#section-6">How to change group link domain?</a></li>
+<li><a href="#section-7">How to change Links in About Page?</a></li>
+<li><a href="#section-8">How to add more stickers?</a></li>
+<li><a href="#section-9">How to change app icon?</a></li>
+</ul>
+<p><a name="section-1"></a></p>
+<h2>What Android Studio version is needed?</h2>
+<p>Latest Android Studio version is recommended, which can be downloaded from <a href="https://developer.android.com/studio/">here</a> </p>
+<p><a name="section-2"></a></p>
+<h2>How to open the project in Android Studio?</h2>
+<ol>
+<li>Open Android Studio &gt; Open an existing Android Studio Project &gt;Choose the folder <code>FireApp - Android App</code> &gt; OK</li>
+<li>wait for 'gradle build' to finish</li>
+<li>Then go to 'Build' Menu and choose Clean Project</li>
+</ol>
+<blockquote>
+<p>{primary} after build finishes you will get an error <code>google-services.json</code> is missing ,to solve this you have to <a href="setup-firebase.html">Setup Firebase</a> after changing Package Name</p>
+</blockquote>
+<p><a name="section-3"></a></p>
+<h2>How to change the package name?</h2>
+<p>go to <code>build.gradle</code> and change <code>applicationId</code> value then click 'Sync Now' at the top</p>
+<p><img src="../images/setup-android.png" alt="image" /></p>
+<p><a name="section-4"></a></p>
+<h2>How to change app name?</h2>
+<p>go to <code>build.gradle</code> and change <code>app_name</code> value, also you might want to change <code>app_folder_name</code> value to change the actual folder name in the Phone then click 'Sync Now' at the top</p>
+<p><a name="config-encryption"></a></p>
+<h2>How to Configure Encryption?</h2>
+<p>there are 2 Types of Encryption supported in the App</p>
+<ol>
+<li>AES Encryption:</li>
+</ol>
+<p>go to <code>build.gradle</code> and change <code>encryption_type</code> value to <code>AES</code>  hen click 'Sync Now' at the top</p>
+<p>now go to <code>src/main/java/com/devlomi/fireapp/utils/enc/aes/AESCrypto.java</code> and change the <code>KEY</code> value to a unique and strong key. this will be used to Encrypt ALL messages so make sure to NOT share it with anyone.</p>
+<ol start="2">
+<li>End-to-End Encryption:</li>
+</ol>
+<p>we are using Virgil's E3 Kit SDK to achieve End to End Encryption, so to use it in your app you have to register for a new account by going to their  <a href="https://virgilsecurity.com/">website</a> .
+after creating a new account, create a new app</p>
+<p><img src="../images/virgil1.png" alt="image" /></p>
+<p>then go to E3Kit and generate your .env file</p>
+<p><img src="../images/virgil2.png" alt="image" /></p>
+<p>create a new key</p>
+<p><img src="../images/virgil3.png" alt="image" /></p>
+<p>get your credentials, make sure to save them in a file or something, we will use it later.</p>
+<p><img src="../images/virgil4.png" alt="image" /></p>
+<p>now go to <code>Backend - Cloud Functions/generate-virgil-jwt.js</code> and open it in any text editor, then start pasting in the values that you've got from Vrigil's website accordingly.
+lastly save the file and exit.</p>
+<ol start="3">
+<li>if you don't need to use encryption at all, go to <code>build.gradle</code> and change <code>encryption_type</code> value to <code>NONE</code>  hen click 'Sync Now' at the top</li>
+</ol>
+<p><a name="section-5"></a></p>
+<h2>How to enable/disable Ad?</h2>
+<ol>
+<li>
+<p>Enable Ads: go to <code>build.gradle</code> and change the following value as you need. <code>"true"</code> to enable and <code>"false"</code> to disable (with quotes)</p>
+<ul>
+<li><code>are_ads_enabled</code> to enable/disable ads</li>
+<li><code>is_status_ad_enabled</code> to enable/disable Ads in 'Status' Page</li>
+<li><code>is_calls_ad_enabled</code> to enable/disable Ads in 'Calls' Page</li>
+<li><code>is_new_chat_ad_enabled</code> to enable/disable Ads when you choosing a contact to chat with</li>
+<li><code>is_interstitial_ad_enabled</code> to enable/disable Popup Ads when opening 'Chat' Page</li>
+</ul>
+</li>
+<li>
+<p>Fill in the units IDs:</p>
+<ul>
+<li>copy you adMob AppId and paste it in <code>admob_app_id</code></li>
+<li>create 2 Banner Units and one Interstitial Ad in AdMob and paste them individually in <code>banner_unit_id_new_chat</code> , <code>banner_unit_id_main</code> and <code>interstitial_ad_id</code>
+lastly click 'Sync Now' at the top.</li>
+</ul>
+</li>
+</ol>
+<p><a name="section-6"></a></p>
+<h2>How to change group link domain?</h2>
+<p>you can do that by going to <code>build.gradle</code> and change  <code>group_invite_host</code> value to your domain's website, then click 'Sync Now' at the top</p>
+<p>example: <code>join.fireapp-chat.com</code></p>
+<p><a name="section-7"></a></p>
+<h2>How to change Links in About Page?</h2>
+<p>you can do that by going to <code>build.gradle</code> and change  <code>twitter_account</code> , <code>website</code> , <code>email</code> values to what you want , then click 'Sync Now' at the top</p>
+<p><a name="section-8"></a></p>
+<h2>How to add more stickers?</h2>
+<p>if you want to add your own stickers go to <code>app\src\main\assets\stickers</code> and paste all stickers images in this folder (should be in <code>png</code> or <code>jpg</code>)</p>
+<p><a name="section-9"></a></p>
+<h2>How to change app icon?</h2>
+<p>in Android Studio on the left panel select app folder &gt; right click &gt; new &gt; Image Asset &gt; make sure Launcher Icons(Adaptive and Legacy) is selected
+choose your asset, adjust  background color if needed &gt; next &gt; finish</p>
+<p><img src="../images/change-app-icon.png" alt="image" /></p>
+			</div>
+</div>
+
+            <larecipe-back-to-top></larecipe-back-to-top>
+        </div>
+
+
+        <script>
+            window.config = [];
+        </script>
+
+        <script src="../vendor/binarytorch/larecipe/assets/js/app.js"></script>
+
+        <script>
+            window.LaRecipe = new CreateLarecipe(config)
+        </script>
+
+        
+                
+
+        
+        <script>
+            LaRecipe.run()
+        </script>
+    </body>
+
+</html>
